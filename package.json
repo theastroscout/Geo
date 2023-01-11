@@ -1,0 +1,26 @@
+{
+	"name": "@surfy/geo",
+	"version": "1.0.0",
+	"description": "Library for work with Geo Data",
+	"main": "js/index.mjs",
+	"scripts": {
+		"test": "node test/index.mjs"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hqdaemon/geo.git"
+	},
+	"author": {
+		"name": "Alexander Yermolenko",
+		"url": "https://surfy.one"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/hqdaemon/geo/issues"
+	},
+	"homepage": "https://surfy.one/geo",
+	"dependencies": {
+		"@surfy/geoip": "^1.0.3",
+		"@surfy/request": "^1.0.9"
+	}
+}
