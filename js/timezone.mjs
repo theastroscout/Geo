@@ -1,8 +1,12 @@
 import request from '@surfy/request';
-import GeoIP from './geoip.mjs'
-import Timezone from './timezone.mjs'
 
-class Geo {
+/*
+
+Timezone
+
+*/
+
+class Timezone {
 
 	constructor(conf){
 		this.email = conf.email;
@@ -13,29 +17,7 @@ class Geo {
 		};
 	}
 
-	/*
-
-	GEO IP
-
-	*/
-
-	async ip(IP){
-		let result = await request({
-			url: `https://api.surfy.one/geo/ip/${IP}`,
-			method: 'POST',
-			headers: this.headers
-		});
-
-		return result;
-	}
-
-	/*
-
-	Timezone
-
-	*/
-
-	async tz(coords){
+	async get(coords){
 		let result = await request({
 			url: `https://api.surfy.one/geo/timezone`,
 			method: 'GET',
@@ -48,7 +30,6 @@ class Geo {
 
 		return result;
 	}
-
 };
 
-export { Geo as default, GeoIP, Timezone }
+export default Timezone;
