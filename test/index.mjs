@@ -20,5 +20,13 @@ let result = [];
 for(let IP of testIPs){
 	result.push(await geo.ip(IP));
 }
-
 console.log(result);
+
+/*
+
+Timezone Test
+@coords = [lat,lng]
+*/
+
+let coords = [46.524465, 6.623966];
+console.log('Timezone:', await geo.tz(coords));
