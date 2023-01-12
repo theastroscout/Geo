@@ -7,6 +7,12 @@ const geo = new Geo({
 	key: credits.key
 });
 
+/*
+
+Geo IP Test
+
+*/
+
 let testIPs = ['8.8.8.8', '2a01:e35:8bd9:8bb0:92b:8628:5ca5:5f2b'];
 
 let result = [];

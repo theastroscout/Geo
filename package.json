@@ -1,7 +1,7 @@
 {
 	"name": "@surfy/geo",
 	"version": "1.0.0",
-	"description": "Library for work with Geo Data",
+	"description": "Library for handling Geo Data",
 	"main": "js/index.mjs",
 	"scripts": {
 		"test": "node test/index.mjs"

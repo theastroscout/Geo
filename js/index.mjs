@@ -21,12 +21,33 @@ class Geo {
 	async ip(IP){
 		let result = await request({
 			url: `https://api.surfy.one/geo/ip/${IP}`,
-			method: "POST",
+			method: 'POST',
 			headers: this.headers
 		});
 
 		return result;
 	}
+
+	/*
+
+	Timezone
+
+	*/
+
+	async tz(coords){
+		let result = await request({
+			url: `https://api.surfy.one/geo/timezone`,
+			method: 'GET',
+			headers: this.headers,
+			params: {
+				lat: coords[0],
+				lng: coords[1]
+			}
+		});
+
+		return result;
+	}
+
 };
 
 export { Geo as default, GeoIP }
