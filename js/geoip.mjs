@@ -1,7 +1,12 @@
 import request from '@surfy/request';
-import GeoIP from './geoip.mjs'
 
-class Geo {
+/*
+
+Geo IP
+
+*/
+
+class GeoIP {
 
 	constructor(conf){
 		this.email = conf.email;
@@ -12,13 +17,7 @@ class Geo {
 		};
 	}
 
-	/*
-
-	GEO IP
-
-	*/
-
-	async ip(IP){
+	async get(IP){
 		let result = await request({
 			url: `https://api.surfy.one/geo/ip/${IP}`,
 			method: "POST",
@@ -29,4 +28,4 @@ class Geo {
 	}
 };
 
-export { Geo as default, GeoIP }
+export default GeoIP;
