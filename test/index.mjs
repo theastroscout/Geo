@@ -30,3 +30,12 @@ Timezone Test
 
 let coords = [46.524465, 6.623966];
 console.log('Timezone:', await geo.tz(coords));
+
+/*
+
+Reverse Geocoding
+
+*/
+
+coords = [51.505563,-0.023309];
+console.log('Reverse Geocoding:', await geo.reverse(coords));
