@@ -4,7 +4,7 @@
 	"description": "Library for handling Geo Data",
 	"main": "js/index.mjs",
 	"scripts": {
-		"test": "node test/index.mjs"
+		"test": "node test/index.mjs; python3 test/pytest.py"
 	},
 	"repository": {
 		"type": "git",
