@@ -49,6 +49,26 @@ class Geo {
 		return result;
 	}
 
+	/*
+
+	Reverse
+
+	*/
+
+	async reverse(coords){
+		let result = await request({
+			url: `https://api.surfy.one/geo/reverse`,
+			method: 'GET',
+			headers: this.headers,
+			params: {
+				lat: coords[0],
+				lng: coords[1]
+			}
+		});
+		
+		return result;
+	}
+
 };
 
 export { Geo as default, GeoIP, Timezone }
