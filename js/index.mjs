@@ -49,6 +49,17 @@ class Geo {
 		return result;
 	}
 
+	/*
+
+	Reverse
+
+	*/
+
+	async reverse(coords){
+		let result;
+		return result;
+	}
+
 };
 
 export { Geo as default, GeoIP, Timezone }
