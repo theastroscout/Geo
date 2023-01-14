@@ -19,3 +19,7 @@ for IP in testIPs:
 	results.append(result)
 
 print('Geo IP: ', json.dumps(result, indent='\t'))
+
+coords = [51.505563,-0.023309]
+result = geo.reverse(coords)
+print('Reverse Geocoding: ', json.dumps(result, indent='\t'))
