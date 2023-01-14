@@ -1,6 +1,7 @@
 import request from '@surfy/request';
 import GeoIP from './geoip.mjs'
 import Timezone from './timezone.mjs'
+import Weather from './weather.mjs'
 
 class Geo {
 
@@ -91,4 +92,4 @@ class Geo {
 
 };
 
-export { Geo as default, GeoIP, Timezone }
+export { Geo as default, GeoIP, Timezone, Weather}
