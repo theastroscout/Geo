@@ -24,5 +24,11 @@ class Geo():
 			'lat': coords[0],
 			'lng': coords[1]
 		}
-		result = requests.post(url, json=data, headers = self.headers)
-		return result.json()
+		
+		try:
+			result = requests.post(url, json=data, headers = self.headers)
+			result = result.json()
+		except:
+			result = {'state': False}
+
+		return result
