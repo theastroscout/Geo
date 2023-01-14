@@ -69,6 +69,26 @@ class Geo {
 		return result;
 	}
 
+	/*
+
+	Weather
+
+	*/
+
+	async weather(coords){
+		let result = await request({
+			url: `https://api.surfy.one/geo/weather`,
+			method: 'GET',
+			headers: this.headers,
+			params: {
+				lat: coords[0],
+				lng: coords[1]
+			}
+		});
+		
+		return result;
+	}
+
 };
 
 export { Geo as default, GeoIP, Timezone }
