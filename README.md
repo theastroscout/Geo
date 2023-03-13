@@ -14,6 +14,70 @@ const geo = new Geo({
 
 ```
 
+### 
+```js
+
+/*
+
+Geo IP Test
+
+*/
+
+let testIPs = ['8.8.8.8', '2a01:e35:8bd9:8bb0:92b:8628:5ca5:5f2b'];
+
+let result = [];
+
+for(let IP of testIPs){
+	result.push(await geo.ip(IP));
+}
+
+console.log(result);
+
+/*
+
+Result [
+  {
+    ip: '8.8.8.8',
+    code: 'US',
+    country: 'United States of America',
+    region: 'California',
+    city: 'Mountain View',
+    latitude: 37.405992,
+    longitude: -122.078515,
+    zip: '94043',
+    timezone: {
+      id: 'America/Los_Angeles',
+      name: 'Pacific Daylight Time',
+      gmt: 'GMT-07:00',
+      offset: -420,
+      localTime: '01/25/2023, 11:12:28 AM GMT-07:00'
+    },
+    state: true
+  },
+  {
+    ip: '2a01:e35:8bd9:8bb0:92b:8628:5ca5:5f2b',
+    code: 'FR',
+    country: 'France',
+    region: 'Ile-de-France',
+    city: 'Paris',
+    latitude: 48.858365,
+    longitude: 2.294532,
+    zip: '75000',
+    timezone: {
+      id: 'Europe/Paris',
+      name: 'Central European Standard Time',
+      gmt: 'GMT+01:00',
+      offset: 60,
+      localTime: '01/25/2023, 7:12:28 PM GMT+01:00'
+    },
+    state: true
+  }
+]
+
+*/
+
+````
+
 ## Python Usage
 
 ```py
