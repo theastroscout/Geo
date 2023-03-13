@@ -74,13 +74,13 @@ Result [
 */
 
 ```
-
 <br/>
 
 ### Timezone
 Returns Timezone extracted from coordinates
 
 ```js
+
 let coords = [46.524465, 6.623966];
 console.log('Timezone:', await geo.tz(coords));
 
@@ -95,6 +95,46 @@ Timezone: {
   gmt: 'GMT+01:00',
   offset: 60,
   localTime: '01/25/2023, 7:12:29 PM GMT+01:00'
+}
+
+*/
+
+```
+<br/>
+
+### Reverse Geocoding
+Returns Address, City, Country, Timezone and other usefull data extracted from coordinates
+
+```js
+
+coords = [51.505563,-0.023309];
+console.log('Reverse Geocoding:', await geo.reverse(coords));
+
+/*
+
+Reverse Geocoding: {
+  state: true,
+  coords: { latitude: 51.505563, longitude: -0.023309 },
+  address: {
+    historic: 'Relief Portrait of Michael von Clemm',
+    road: 'Cabot Square',
+    quarter: 'Canary Wharf',
+    suburb: 'Isle of Dogs',
+    borough: 'London Borough of Tower Hamlets',
+    city: 'London',
+    stateDistrict: 'Greater London',
+    state: 'England',
+    postcode: 'E14 4QQ',
+    country: 'United Kingdom',
+    countryCode: 'gb'
+  },
+  timezone: {
+    id: 'Europe/London',
+    name: 'Greenwich Mean Time',
+    gmt: 'GMT',
+    offset: 0,
+    localTime: '01/25/2023, 6:12:29 PM GMT'
+  }
 }
 
 */
