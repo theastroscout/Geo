@@ -14,14 +14,10 @@ const geo = new Geo({
 
 ```
 
-### 
+### Geo IP
+Returns Geo data extracted from IPv4 or IPv6
+
 ```js
-
-/*
-
-Geo IP Test
-
-*/
 
 let testIPs = ['8.8.8.8', '2a01:e35:8bd9:8bb0:92b:8628:5ca5:5f2b'];
 
