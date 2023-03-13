@@ -13,6 +13,7 @@ const geo = new Geo({
 });
 
 ```
+<br/>
 
 ### Geo IP
 Returns Geo data extracted from IPv4 or IPv6
@@ -72,7 +73,33 @@ Result [
 
 */
 
-````
+```
+
+<br/>
+
+### Timezone
+Returns Timezone extracted from coordinates
+
+```js
+let coords = [46.524465, 6.623966];
+console.log('Timezone:', await geo.tz(coords));
+
+/*
+
+Timezone: {
+  state: true,
+  latitude: 46.524465,
+  longitude: 6.623966,
+  id: 'Europe/Zurich',
+  name: 'Central European Standard Time',
+  gmt: 'GMT+01:00',
+  offset: 60,
+  localTime: '01/25/2023, 7:12:29 PM GMT+01:00'
+}
+
+*/
+
+```
 
 ## Python Usage
 
